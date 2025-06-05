@@ -1,0 +1,96 @@
+/* Body and HTML setup */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("Pictures/index_backgr1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%; /* Full height for the body */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Header styling */
+.header1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 113px;
+    background-color: rgb(85, 84, 84);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; /* Ensure the header stays on top */
+}
+
+/* Title in the header */
+.header1 p2 {
+    font-size: xx-large;
+    color: rgb(219, 33, 9);
+    margin-left: 10px;
+}
+
+/* Stats container below the header */
+.stats-container {
+    position: absolute; /* Ensure it's positioned relative to the body */
+    top: 113px; /* Position container just below the header */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 95%;
+    max-height: calc(100vh - 113px); /* Adjust based on the height of the header */
+    overflow-y: auto; /* Allow vertical scrolling for the stats section */
+    z-index: 1; /* Place it under the header */
+    margin-left: 0.5%;
+    margin-right: -1%;
+}
+
+/* Heading of the statistics section */
+h1 {
+    color: #b31b1b;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+/* Ensure the table takes up the full width */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    visibility: visible; /* Ensure the table is visible */
+}
+
+/* Style for table headers and cells */
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    /* Added background color for better visibility */
+}
+
+th {
+    background-color: rgb(219, 76, 9); /* Header background color */
+    color: white; /* Text color for header */
+}
+
+td {
+    background-color: #f9f9f9; /* Light background color for table data */
+}
+
+/* Added borders to make sure the table is visible */
+table, th, td {
+    border: 1px solid #000; /* Black borders to make the table and its cells stand out */
+}
+
+
+/* Adjusting the graph's space */
+canvas {
+    margin-bottom: 30px; /* Space between the graph and the table */
+}
