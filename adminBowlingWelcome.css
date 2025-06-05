@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.index1 {
+    width: 100%;
+    height: 100vh;
+    background-image: url("Pictures/index_backgr1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;    
+    overflow: hidden;
+}
+
+
+.index1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    z-index: 0;
+}
+
+.index1 > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* HEADER */
+.header1 {
+    width: 100%;
+    height: 113px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(85, 84, 84);
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+}
+
+.header1 p2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+    margin-left: 2%;
+    color: rgb(219, 33, 9);
+}
+
+/*HEADER2*/
+
+.header2 {
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 30px;
+}
+
+.header2 h1 {
+    font-size: 40px;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+}
+
+
+/* Centered Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    margin-top: 3%;
+    color: white;
+}
+
+.grid-item {
+    background-color: rgba(226, 204, 204, 0.425);
+    border-radius: 12px;
+    padding: 40px 25px 35px 35px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+}
+.grid-container a{
+    color: white;
+    text-decoration: none;
+}
+.grid-item:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color: #8f0e05;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(226, 204, 204, 0.425);
+    border-radius: 12px;
+    padding: 40px 25px 35px 35px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    text-align: center;
+}
+
+
+/* Hover style like grid-item */
+.dropdown:hover {
+    transform: scale(1.05);
+    background-color: #8f0e05;
+}
+
+/* Dropdown content (initially hidden) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(226, 204, 204, 0.425);
+    min-width: 180px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    z-index: 1;
+    border-radius: 5px;
+    top: 100%; /* Directly below parent */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 5px 0;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+
+/* Hover style for dropdown items */
+.dropdown-content a:hover {
+    color: #8f0e05;
+   
+}
+.button-row {
+    display: flex;
+    justify-content: center; /* or space-around / space-between */
+    gap: 40px;
+    margin-top: 80px;
+    color:white;
+}
+
+.button-row .dropdown,
+.button-row .grid-item {
+    width: 250px;
+    text-align: center;
+    background-color: rgba(226, 204, 204, 0.425);
+    border-radius: 12px;
+    padding: 30px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+
+.button-row .dropdown:hover,
+.button-row .grid-item:hover {
+    transform: scale(1.05);
+    background-color:#8f0e05;
+    color: white;
+    text-decoration: none;
+}
+.button-row a{
+    color:white;
+    text-decoration: none;
+}
+
